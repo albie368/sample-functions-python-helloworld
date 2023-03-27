@@ -1,6 +1,9 @@
+import sqlite3, time
+
 def main(args):
-      name = args.get("name", "stranger")
-      greeting = "Hello " + name + "!"
-      print(greeting)
-      return {"body": greeting}
-  
+    query = "DELETE FROM user WHERE timestamp >= 7200"
+    con = sqlite3.connect("main")
+    cur = con.cursor()
+    cur.execute(query)
+    con.close()
+
