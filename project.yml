@@ -3,3 +3,8 @@ packages:
     actions:
       - name: hello
         runtime: 'python:default'
+        triggers:
+          - name: trigger-hello
+            sourceType: scheduler
+            sourceDetails:
+              cron: "0 * * * *"
