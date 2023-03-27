@@ -1,6 +1,6 @@
 packages:
   - name: sample
-    actions:
+    functions:
       - name: hello
         runtime: 'python:default'
         triggers:
